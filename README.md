@@ -1,7 +1,8 @@
 # Wincenzo-Hellish-revenge
 A 2D platformer in Unity & C# as Game Developement Course's Final Project! Includes:
 
-    Player Movement, Jump & Wall Jumping: Controllable Jump Height, Coyote Time, Double Jumping (Triple Jumping etc.)
+    Player Movement
+    Jump & Wall Jumping: Controllable Jump Height, Coyote Time, Double Jumping (Triple Jumping etc.)
     Graphics & Animation
     Dragon Warrior Asset: https://assetstore.unity.com/packages...
     Pixel Adventure Asset: https://assetstore.unity.com/packages..
