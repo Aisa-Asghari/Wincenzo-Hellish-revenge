@@ -29,6 +29,7 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
     }
+    
     public void TakeDamage(float _damage)
     {
         if (invulnerable) return;

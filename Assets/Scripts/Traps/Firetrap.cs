@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Firetrap : MonoBehaviour
 {
-  
+
     [SerializeField] private float damage;
 
     [Header("Firetrap Timers")]
@@ -46,11 +46,13 @@ public class Firetrap : MonoBehaviour
                 collision.GetComponent<Health>().TakeDamage(damage);
         }
     }
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
             playerHealth = null;
     }
+    
     private IEnumerator ActivateFiretrap()
     {
         //turn the sprite red to notify the player and trigger the trap

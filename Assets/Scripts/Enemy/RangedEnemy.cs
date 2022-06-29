@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RangedEnemy : MonoBehaviour
 {
-  [Header("Attack Parameters")]
+    [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
     [SerializeField] private int damage;
@@ -27,11 +25,13 @@ public class RangedEnemy : MonoBehaviour
     //References
     private Animator anim;
     private EnemyPatrol enemyPatrol;
+    private EnemyProjectile enemyProjectile;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        enemyProjectile = GetComponentInParent<EnemyProjectile>();
     }
 
     private void Update()

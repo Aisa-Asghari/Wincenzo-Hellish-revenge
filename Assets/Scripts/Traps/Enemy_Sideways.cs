@@ -11,24 +11,26 @@ public class Enemy_Sideways : MonoBehaviour
     private float leftEdge;
     private float rightEdge;
 
-    private void Awake(){
+    private void Awake()
+    {
         leftEdge = transform.position.x - movmentDistance;
         rightEdge = transform.position.x + movmentDistance;
     }
 
-    private void Update(){
+    private void Update()
+    {
         if (movingLeft)
         {
 
             if (transform.position.x > leftEdge)
             {
-                    transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
             }
             else
             {
                 movingLeft = false;
             }
-            
+
         }
         else
         {
@@ -38,14 +40,15 @@ public class Enemy_Sideways : MonoBehaviour
             }
             else
             {
-                movingLeft = true;                
+                movingLeft = true;
             }
-            
+
         }
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision){
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.tag == "Player")
         {
             collision.GetComponent<Health>().TakeDamage(damage);

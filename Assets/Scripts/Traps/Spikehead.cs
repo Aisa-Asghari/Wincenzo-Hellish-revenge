@@ -21,6 +21,7 @@ public class Spikehead : EnemyDamage
     {
         Stop();
     }
+    
     private void Update()
     {
         //Move spikehead to destination only if attacking
@@ -33,6 +34,7 @@ public class Spikehead : EnemyDamage
                 CheckForPlayer();
         }
     }
+    
     private void CheckForPlayer()
     {
         CalculateDirections();
@@ -51,6 +53,7 @@ public class Spikehead : EnemyDamage
             }
         }
     }
+    
     private void CalculateDirections()
     {
         directions[0] = transform.right * range; //Right direction
@@ -58,6 +61,7 @@ public class Spikehead : EnemyDamage
         directions[2] = transform.up * range; //Up direction
         directions[3] = -transform.up * range; //Down direction
     }
+    
     private void Stop()
     {
         destination = transform.position; //Set destination as current position so it doesn't move

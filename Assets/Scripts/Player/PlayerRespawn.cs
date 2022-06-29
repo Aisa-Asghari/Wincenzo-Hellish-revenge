@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRespawn : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerRespawn : MonoBehaviour
         //Move the camera to the checkpoint's room
         Camera.main.GetComponent<CameraController>().MoveToNewRoom(currentCheckpoint.parent);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Checkpoint")
@@ -26,7 +28,11 @@ public class PlayerRespawn : MonoBehaviour
             currentCheckpoint = collision.transform;
             SoundManager.instance.PlaySound(checkpoint);
             collision.GetComponent<Collider2D>().enabled = false;
-            collision.GetComponent<Animator>().SetTrigger("activate");
+            collision.GetComponent<Animator>().SetTrigger("appear");
+        }
+        else if (collision.gameObject.tag == "Winner")
+        {
+            SceneManager.LoadScene("Winner");
         }
     }
 }

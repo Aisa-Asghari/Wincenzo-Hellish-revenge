@@ -26,9 +26,9 @@ public class Door : MonoBehaviour
             }
             else
             {
-                cam.MoveToNewRoom(previousRoom);
-                previousRoom.GetComponent<Room>().ActivateRoom(true);
-                nextRoom.GetComponent<Room>().ActivateRoom(false);
+                //cam.MoveToNewRoom(previousRoom);
+                //previousRoom.GetComponent<Room>().ActivateRoom(true);
+                //nextRoom.GetComponent<Room>().ActivateRoom(false);
             }
         }
     }

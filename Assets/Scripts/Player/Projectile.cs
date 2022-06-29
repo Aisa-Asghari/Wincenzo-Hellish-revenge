@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
+
     private void Update()
     {
         if (hit) return;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-   
+
     public static SoundManager instance { get; private set; }
     private AudioSource source;
 
@@ -23,6 +23,7 @@ public class SoundManager : MonoBehaviour
         else if (instance != null && instance != this)
             Destroy(gameObject);
     }
+
     public void PlaySound(AudioClip _sound)
     {
         source.PlayOneShot(_sound);
