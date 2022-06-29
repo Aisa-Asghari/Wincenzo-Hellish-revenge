@@ -55,10 +55,12 @@ public class Health : MonoBehaviour
             }
         }
     }
+
     public void AddHealth(float _value)
     {
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
+
     private IEnumerator Invunerability()
     {
         invulnerable = true;
@@ -73,8 +75,22 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(10, 11, false);
         invulnerable = false;
     }
+
     private void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+    //Respawn
+    public void Respawn()
+    {
+        AddHealth(startingHealth);
+        anim.ResetTrigger("die");
+        anim.Play("Idle");
+        StartCoroutine(Invunerability());
+
+        //Activate all attached component classes
+        foreach (Behaviour component in components)
+            component.enabled = true;
     }
 }

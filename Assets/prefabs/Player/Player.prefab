@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5549486683047480317}
   - component: {fileID: 5549486683047480316}
   - component: {fileID: 5549486683047480315}
+  - component: {fileID: 2919039153072513124}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -235,7 +236,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  fireballSound: {fileID: 0}
+  fireballSound: {fileID: 8300000, guid: e5603a9fecf51ec4996bfab41558e6cc, type: 3}
 --- !u!114 &5549486683047480315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,5 +255,18 @@ MonoBehaviour:
   components:
   - {fileID: 5549486683047480316}
   - {fileID: 5549486683047480318}
-  deathSound: {fileID: 0}
-  hurtSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 1e2ab3b4daf1f654fa0ff25403656117, type: 3}
+  hurtSound: {fileID: 8300000, guid: 42c2ce107c067e64584fb77463bc31f7, type: 3}
+--- !u!114 &2919039153072513124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5549486683047480307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c535363ac9457b4dab7af4233477c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpoint: {fileID: 8300000, guid: a9cb409e81c58e247a8791ad5a52d0fe, type: 3}
